@@ -7,13 +7,21 @@ class Pengunjung {
         self::$jumlah++;
     }
 
+    public static function reset() {
+        self::$jumlah = 0;
+    }
 }
 
 $p1 = new Pengunjung();
 $p2 = new Pengunjung();
 $p3 = new Pengunjung();
+$p4 = new Pengunjung();
+$p5 = new Pengunjung();
 
 echo "Jumlah Pengunjung (sebelum di reset): " . Pengunjung::$jumlah . "<br>\n";
 
+Pengunjung::reset();
+
+echo "Jumlah Pengunjung (sesudah di reset): " . Pengunjung::$jumlah . "<br>\n";
 
 ?>
